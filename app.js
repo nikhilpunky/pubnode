@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 // Define the port number
-const PORT = 8592;
+const PORT = 3000;
 
 // Define a route for the root URL
 app.get('/', (req, res) => {

@@ -1,9 +1,26 @@
-// Import the express module
+// Import required modules
 const express = require('express');
-const app = express();
+const mysql = require('mysql2');
 
-// Define the port number
+const app = express();
 const PORT = 3000;
+
+// Create a MySQL connection
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'customuser',
+  password: 'custompassword',
+  database: 'customdb'
+});
+
+// Connect to MySQL
+db.connect(err => {
+  if (err) {
+    console.error('Database connection failed:', err.stack);
+    return;
+  }
+  console.log('Connected to MySQL database');
+});
 
 // Define a route for the root URL
 app.get('/', (req, res) => {

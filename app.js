@@ -7,7 +7,7 @@ const PORT = 3000;
 
 // Create a MySQL connection
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: 'mysql-project',
   user: 'customuser',
   password: 'custompassword',
   database: 'customdb'

@@ -7,7 +7,7 @@ const PORT = 3000;
 
 // Create a MySQL connection
 const db = mysql.createConnection({
-  host: 'mysql-project-mysql',
+  host: 'mysql-project-mysql_net',
   port: 8705, // <-- Added custom MySQL port
   user: 'customuser',
   password: 'custompassword',
